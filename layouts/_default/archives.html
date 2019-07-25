@@ -1,3 +1,4 @@
+{{ partial "head" . }}
 <article id="main-content" class="container main_content single">
 <h3>Post Archives</h3>
 
@@ -115,10 +116,10 @@
 -->
 
 <ul>
-{{ range $key, $value := .Site.Taxonomies.tags }}
-	<li><a href="tags/{{ $key | urlize  }}">{{ $key | humanize }}</a> ({{ len $value }})</li>
+{{ range .Site.Taxonomies.tags.ByCount }}
+	<li><a href="/tags/{{ .Name | urlize  }}">{{ .Name | humanize }}</a> ({{ .Count }})</li>
 {{ end }}
 </ul>
 
 </article>
-
+{{ partial "foot" . }}

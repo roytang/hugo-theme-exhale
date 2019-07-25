@@ -1,7 +1,7 @@
 {{ partial "head" . }}
 {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 {{ range $paginator.Pages }}
-<div class="post">
+<article>
     <h2>
         <a href="{{ .Permalink }}" rel="bookmark" title="Permalink: {{ .Title }}">{{ .Title }}</a>
     </h2>
@@ -10,6 +10,6 @@
     <a class="label" href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ .  | urlize }}</a>
     {{ end }}
     {{ .Content }}
-</div>
+</article>
 {{ end }}
 {{ partial "foot" . }}
