@@ -84,3 +84,19 @@ blockquote {
 a {
     color: green;
 }
+
+.contact_link > span {
+    display: none;
+}
+.contact_link > .fa, .contact_link > .fab {
+    display: inline;
+}
+
+/* Post titles */
+h2, h2 a {
+    font-weight: normal;
+    font-size: 24px;
+    font-family: Calibri, 'Lucida Grande', Helvetica, Arial, sans-serif;
+    line-height: 120%;
+    text-decoration: none;
+}

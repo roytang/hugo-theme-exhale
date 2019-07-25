@@ -1,4 +1,33 @@
 <footer class="mainfooter">
-<p>This book is available to read in full on <a href="https://www.gutenberg.org/files/861/861-h/861-h.htm">the Project Gutenburg website</a>.</p>
+
+        <p>
+        {{ with .Site.Params.twitter }}
+        <a id="contact-link-twitter" class="contact_link" href="https://twitter.com/{{ . }}">
+          <span class="fab fa-twitter-square"></span><span>twitter</span></a>
+        {{ end }}
+
+        {{ with .Site.Params.linkedin }}
+        <a id="contact-link-linkedin" class="contact_link" href="https://www.linkedin.com/in/{{ . }}">
+          <span class="fab fa-linkedin"></span><span>linkedin</span></a>
+        {{ end }}
+        
+        {{ with .Site.Params.github }}
+        <a id="contact-link-github" class="contact_link" href="https://github.com/{{ . }}">
+          <span class="fab fa-github-square"></span><span>github</span></a>
+        {{ end }}
+
+        {{ if and (.Site.Params.rss) (.RSSLink) }}
+        <a id="contact-link-rss" class="contact_link" href="{{ .RSSLink }}" type="application/rss+xml">
+          <span class="fa fa-rss-square"></span><span>rss</span></a>
+        {{ end }}
+        
+        {{ with .Site.Author.email }}
+        <a id="contact-link-email" class="contact_link" href="mailto:{{ . }}">
+          <span class="fa fa-envelope-square"></span><span>email</span></a>
+        {{ end }}
+        </p>
+
+        <p>{{ .Site.Params.footline }}</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.  
 </footer>      
 

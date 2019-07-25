@@ -4,7 +4,7 @@
   </header>
   <ul class="container content">
     {{ range $index, $page := .Paginator.Pages }}
-      {{ .Render "single" }}
+        {{ partial "single/summary" . }}
     {{ end }}
   </ul>
 </article>
