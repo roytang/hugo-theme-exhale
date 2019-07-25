@@ -1,0 +1,20 @@
+<article class="aside">
+    <div class="meta">
+        <p><a href="{{ .Permalink }}"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Data.Formats.date }}</time></a></p>
+        <p>
+        {{ if .Params.reply }}
+            Reply to <a href="https://twitter.com/{{ .Params.in_reply_to_screen_name }}/status/{{ .Params.in_reply_to_status_id_str }}">@{{ .Params.in_reply_to_screen_name }}</a>:<br/>
+        {{ end }}
+        {{ if .Params.retweet }}
+            From <a href="https://twitter.com/{{ .Params.retweeted_screen_name }}/status/{{ .Params.id }}">@{{ .Params.retweeted_screen_name }}</a>:<br/>
+        {{ end }}
+            via {{ .Params.source }}
+        </p>
+        {{ range .Params.tags }}
+        <a class="label" href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ .  | urlize }}</a>
+        {{ end }}
+    </div>
+    <div class="aside_content">
+        {{ .Content }}
+    </div>
+</article>

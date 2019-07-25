@@ -2,11 +2,11 @@
 <article id="main-content" class="container main_content list">
   <header class="container">
   </header>
-  <ul class="container content">
+  <div class="container content">
     {{ range $index, $page := .Paginator.Pages }}
-        {{ partial "single/summary" . }}
+        {{ .Render "list_item" }}
     {{ end }}
-  </ul>
+  </div>
   {{ partial "pagination" . }}
 </article>
 {{ partial "foot" . }}

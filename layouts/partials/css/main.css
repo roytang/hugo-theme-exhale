@@ -74,10 +74,10 @@ article img {
 }
 
 blockquote {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    padding-left: 15px;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-left: 1rem;
+    padding-left: 0.2rem;
     border-left: 3px green solid;
 } 
 
@@ -163,4 +163,23 @@ table.grid_archive a {
 /* Spoiler shortcode */
 .spoiler {
     display: none;
+}
+
+/* Asides */
+.aside {
+    display: block;
+}
+
+.aside .meta {
+    font-size: 0.7rem;
+    color: gray;
+}
+
+@media (min-width: 550px) {
+    .aside {
+        display: grid;
+        grid-template-columns: 1fr 3.5fr;
+        border-bottom: 1px green dotted;
+        width: 100%;
+    }
 }

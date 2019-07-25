@@ -1,4 +1,4 @@
-<div id="post">
+<article class="{{ .Type }}">
     <h2>
         <a href="{{ .Permalink }}" rel="bookmark" title="Permalink: {{ .Title }}">{{ .Title }}</a>
     </h2>
@@ -8,4 +8,4 @@
     {{ end }}
     {{ .Content }}
 
-</div>
+</article>
