@@ -159,3 +159,8 @@ table.grid_archive a {
 .mtgdecklist ul {
     list-style-type: none;
 }
+
+/* Spoiler shortcode */
+.spoiler {
+    display: none;
+}

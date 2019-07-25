@@ -2,5 +2,5 @@
     <p><a class="baselink" href="{{ .Site.BaseURL }}">
   {{ .Site.Title }}
     </a></p>
-    <p>{{ .Site.Params.topline }}</p>
+    <p>{{ .Site.Params.topline | markdownify }}</p>
 </header>
