@@ -60,12 +60,12 @@ a {
   .wrapper {
     grid-column-gap: 2em;
     grid-row-gap: 20px;
-    grid-template-columns: [col-left-start] 4fr [col-main-start] 1fr [col-main-end];
+    grid-template-columns: [col-left-start] 4fr [col-main-start] minmax(200px, 1fr) [col-main-end];
     grid-template-rows: [row-header-start] auto [row-panel-start] auto [row-content-start] auto [row-footer-start] auto [row-footer-end];
   }
 
   .mainheader {
-    grid-column: col-left-start / col-main-end;
+    grid-column: col-left-start / col-main-start;
   }
 
   .secondheader {
@@ -161,11 +161,11 @@ table.grid_archive td.arc {
 table.grid_archive a {
     text-decoration: none;
 }
-.list_archive { display: none; }
+.grid-or-list .list_archive { display: none; }
 
 @media screen and (max-width: 640px) { 
-    .grid_archive { display: none; }
-    .list_archive { display: initial; }
+    .grid-or-list .grid_archive { display: none; }
+    .grid-or-list .list_archive { display: initial; }
 }
 
 /* Pagination */
