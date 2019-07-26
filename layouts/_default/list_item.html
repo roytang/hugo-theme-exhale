@@ -1,1 +1,4 @@
-{{ partial "single/summary" . }}
+<article class="list_item {{ .Type }}">
+    {{ .Render "summary.hat" }}
+    {{ .Render "summary.content" }}
+</article>

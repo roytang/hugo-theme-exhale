@@ -1,3 +1,6 @@
 {{ partial "head" . }}
-{{ partial "single/content" . }}
+<article class="list_item {{ .Type }}">
+{{ .Render "single.hat" }}
+{{ .Render "single.content" }}
+</article>
 {{ partial "foot" . }}

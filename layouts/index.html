@@ -1,6 +1,6 @@
 {{ partial "head" . }}
 {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 {{ range $paginator.Pages }}
-    {{ partial "single/summary" . }}
+    {{ .Render "list_item" }}
 {{ end }}
 {{ partial "foot" . }}

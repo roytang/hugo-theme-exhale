@@ -1,0 +1,12 @@
+    <div class="meta">
+        <p>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Data.Formats.date }}</time>
+        <a rel="permalink" href="{{ .Permalink }}">#</a>
+        </p>
+        
+        <p>
+        {{ range .Params.tags }}
+        <a class="tag" href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ .  | urlize }}</a>
+        {{ end }}
+        </p>
+    </div>
