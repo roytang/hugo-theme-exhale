@@ -11,8 +11,9 @@ body {
   grid-row-gap: 10px;
   grid-template-columns: 100%;
   grid-template-rows: [row-header-start] auto
-                      [row-content-start] auto
                       [row-panel-start] auto
+                      [row-secondheader-start] auto
+                      [row-content-start] auto
                       [row-footer-start] auto [row-footer-end];
 }
 
@@ -26,10 +27,28 @@ body {
 
 .panel {
   grid-row: row-panel-start;
+  border-top: 3px green solid;
+  border-bottom: 3px green solid;
+}
+
+.secondheader {
+  grid-row: row-secondheader-start;
 }
 
 .mainfooter {
   grid-row: row-footer-start;
+}
+
+.header_icons {
+  float: left;
+}
+
+.searchform {
+  float: right;
+}
+
+#searchterm, .searchform #submit {
+  vertical-align: top;
 }
 
 @media (min-width: 550px) {
@@ -37,21 +56,26 @@ body {
   .wrapper {
     grid-column-gap: 2em;
     grid-row-gap: 20px;
-    grid-template-columns: [col-left-start] minmax(150px, 1fr) [col-main-start] 4fr [col-main-end];
-    grid-template-rows: [row-header-start] auto [row-content-start] auto [row-footer-start] auto [row-footer-end];
+    grid-template-columns: [col-left-start] 4fr [col-main-start] 1fr [col-main-end];
+    grid-template-rows: [row-header-start] auto [row-panel-start] auto [row-content-start] auto [row-footer-start] auto [row-footer-end];
   }
 
   .mainheader {
     grid-column: col-left-start / col-main-end;
   }
 
+  .secondheader {
+    grid-column: col-main-start / col-main-end;
+    grid-row: row-header-start;
+  }
+
   .panel {
-    grid-column: col-left-start / col-main-start;
-    grid-row: row-content-start;
+    grid-column: col-left-start / col-main-end;
+    grid-row: row-panel-start;
   }
 
   .content {
-    grid-column: col-main-start / col-main-end;
+    grid-column: col-left-start / col-main-end;
     grid-row: row-content-start;
     
   }
@@ -59,6 +83,12 @@ body {
   .mainfooter {
     grid-column:  col-left-start / col-main-end;
   }
+
+  .header_icons, .searchform {
+    float: right;
+    padding-top: 2px;
+  }
+  
 }
 
 article img {
