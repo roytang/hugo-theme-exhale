@@ -3,6 +3,10 @@ body {
     font-size: 0.8em;
 }
 
+a {
+    text-decoration: none;
+}
+
 .wrapper {
   width: 100%;
   max-width: 960px;
@@ -27,8 +31,8 @@ body {
 
 .panel {
   grid-row: row-panel-start;
-  border-top: 3px green solid;
-  border-bottom: 3px green solid;
+  border-top: 3px {{ .Site.Params.mainColor }} solid;
+  border-bottom: 3px {{ .Site.Params.mainColor }} solid;
 }
 
 .secondheader {
@@ -108,11 +112,11 @@ blockquote {
     margin-bottom: 0.2rem;
     margin-left: 1rem;
     padding-left: 0.2rem;
-    border-left: 3px green solid;
+    border-left: 3px {{ .Site.Params.mainColor }} solid;
 } 
 
 a {
-    color: green;
+    color: {{ .Site.Params.mainColor }};
 }
 
 .contact_link > span {
@@ -209,7 +213,7 @@ table.grid_archive a {
     .aside {
         display: grid;
         grid-template-columns: 1fr 3.5fr;
-        border-bottom: 1px green dotted;
+        border-bottom: 1px {{ .Site.Params.mainColor }} dotted;
         width: 100%;
     }
 }
