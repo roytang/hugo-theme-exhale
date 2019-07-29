@@ -9,4 +9,8 @@
         <a class="tag" href="{{ "/tags/" | absURL }}{{ . | urlize }}">{{ .  | urlize }}</a>
         {{ end }}
         </p>
+
+        {{ if and .Params.source .Params.source_url }}
+        via <a target="_new" href="{{ .Params.source_url }}">{{ .Params.source }}</a></a>
+        {{ end }}
     </div>
