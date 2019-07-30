@@ -1,8 +1,10 @@
 <header class="mainheader">
+    <div>
     <p><a class="baselink" href="{{ .Site.BaseURL }}">
-  {{ .Site.Title }}
+      {{ .Site.Title }}
     </a></p>
     <p>{{ .Site.Params.topline | markdownify }}</p>
+    </div>
 </header>
 <div class="secondheader">
     {{ partial "header/search" . }}

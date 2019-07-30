@@ -31,8 +31,8 @@ a {
 
 .panel {
   grid-row: row-panel-start;
-  border-top: 3px {{ .Site.Params.mainColor }} solid;
-  border-bottom: 3px {{ .Site.Params.mainColor }} solid;
+  border-top: 3px {{ .Site.Params.mainColor | default "orange" }} solid;
+  border-bottom: 3px {{ .Site.Params.mainColor | default "orange" }} solid;
 }
 
 .secondheader {
@@ -41,6 +41,7 @@ a {
 
 .mainfooter {
   grid-row: row-footer-start;
+  border-top: 1px {{ .Site.Params.mainColor | default "orange" }} solid;
 }
 
 .header_icons {
@@ -112,11 +113,11 @@ blockquote {
     margin-bottom: 0.2rem;
     margin-left: 1rem;
     padding-left: 0.2rem;
-    border-left: 3px {{ .Site.Params.mainColor }} solid;
+    border-left: 3px {{ .Site.Params.mainColor | default "orange" }} solid;
 } 
 
 a {
-    color: {{ .Site.Params.mainColor }};
+    color: {{ .Site.Params.mainColor | default "orange" }};
 }
 
 .contact_link > span {
@@ -219,12 +220,16 @@ table.grid_archive a {
     margin: 0;
 }
 
+.list_item .meta_item {
+    display: inline; 
+}
+
 @media (min-width: 550px) {
     .list_item {
         display: grid;
         grid-template-columns: [c-left-start] 1fr [c-main-start] 3.5fr [c-main-end];
         grid-template-rows: [r-title-start] auto [r-main-start] auto [r-main-end];
-        border-bottom: 1px {{ .Site.Params.mainColor }} dotted;
+        border-bottom: 1px {{ .Site.Params.mainColor | default "orange" }} dotted;
         width: 100%;
     }
 
@@ -253,8 +258,23 @@ table.grid_archive a {
         font-size: 0.9rem;
     }
 
-    .list_item .tag {
+    .list_item .tag, .list_item .meta_item {
         display: block;
     }
     
+}
+
+.about-author img.u-photo {
+    height: 2rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    float: left;
+}
+
+.post-title {
+    color: black;
+}
+
+.post-title:hover {
+    color: {{ .Site.Params.mainColor | default "orange" }};
 }
