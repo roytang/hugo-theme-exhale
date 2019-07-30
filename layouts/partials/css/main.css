@@ -32,7 +32,10 @@ a {
 .panel {
   grid-row: row-panel-start;
   border-top: 3px {{ .Site.Params.mainColor | default "orange" }} solid;
-  border-bottom: 3px {{ .Site.Params.mainColor | default "orange" }} solid;
+}
+
+.panel a:hover {
+    text-decoration: underline;
 }
 
 .secondheader {
