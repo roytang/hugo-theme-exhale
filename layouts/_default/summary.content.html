@@ -1,4 +1,7 @@
 <div class="content">
+{{ with .Params.featuredImage }}
+    <img class="summary-image-preview" src="{{ . }}" />
+{{ end }}
 {{ .Summary }}
 <p><a href="{{ .Permalink }}">READ MORE</a></p>
 </div>

@@ -3,7 +3,6 @@
         <p class="meta_item"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format .Site.Data.Formats.date }}</time></p>
         
         <p class="meta_item">:: {{ .WordCount }} words</p>
-        <p class="meta_item">:: by <span class="p-author">{{ .Params.author | default .Site.Author.name }}</span></p>
 
         {{ if and .Params.source .Params.source_url }}
         <p class="meta_item">:: via <a target="_new" href="{{ .Params.source_url }}">{{ .Params.source }}</a></p>

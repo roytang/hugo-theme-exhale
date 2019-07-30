@@ -287,3 +287,9 @@ table.grid_archive a {
     display: grid;
     grid-template-columns: 3rem auto;
 }
+
+.summary-image-preview {
+    float: left;
+    height: 6rem;
+    padding: 1rem;
+}
