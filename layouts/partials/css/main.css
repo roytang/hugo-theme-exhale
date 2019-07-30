@@ -272,6 +272,7 @@ table.grid_archive a {
     margin: 0.5rem;
     border-radius: 50%;
     float: left;
+    vertical-align: center;
 }
 
 .post-title {
@@ -280,4 +281,9 @@ table.grid_archive a {
 
 .post-title:hover {
     color: {{ .Site.Params.mainColor | default "orange" }};
+}
+
+.mainheader {
+    display: grid;
+    grid-template-columns: 3rem auto;
 }

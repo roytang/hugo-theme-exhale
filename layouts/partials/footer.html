@@ -1,18 +1,9 @@
 <footer class="mainfooter">
-    <p class="h-card vcard about-author">
-        <img class="u-photo" src="{{ .Site.Params.featuredImage }}" alt="" />
-        <a class="p-nickname u-email email metatag" rel="me" href="mailto:{{ .Site.Author.email }}">
-                    {{ .Site.Author.nick }}
-        </a> 
-        (c) {{ now.Format "2006" }}        
-        <a style="text-decoration: none" href={{ .Site.BaseURL }} class="p-name u-url url author metatag" rel="me">
-            {{ .Site.Author.name }}
-        </a>
-        {{ if .Site.Params.license }}
-        {{ .Site.Params.license | markdownify }}
-        {{ else }}
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
-        {{ end }}
-    </p>
+    (c) 2002-{{ now.Format "2006" }} {{ .Site.Author.name }}
+    {{ if .Site.Params.license }}
+    {{ .Site.Params.license | markdownify }}
+    {{ else }}
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
+    {{ end }}
 </footer>      
 
