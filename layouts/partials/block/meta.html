@@ -1,6 +1,6 @@
     <div class="meta">
         <div class="meta1">
-        <p class="meta_item"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Data.Formats.date }}</time></p>
+        <p class="meta_item"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05" }}">{{ .Date.Format .Site.Data.Formats.date }}</time></p>
         
         <p class="meta_item">:: {{ .WordCount }} words</p>
         <p class="meta_item">:: by <span class="p-author">{{ .Params.author | default .Site.Author.name }}</span></p>
@@ -12,7 +12,7 @@
 
         <p>
         {{ range .Params.tags }}
-        <a class="tag" href="{{ "/tags/" | absURL }}{{ . | urlize }}"><i class="fas fa-tag"></i> {{ .  | urlize }}</a>
+        <a class="tag p-category" href="{{ "/tags/" | absURL }}{{ . | urlize }}"><i class="fas fa-tag"></i> {{ .  | urlize }}</a>
         {{ end }}
         </p>
 
