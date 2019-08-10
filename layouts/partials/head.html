@@ -19,4 +19,4 @@
             <a href="{{ .URL | absURL }}"{{ if and ( isset . "Title" ) ( ne .Title "" ) }} title="{{ .Title }}"{{ end }}>{{ .Name }}</a>
             {{ end }}
         </div>
-        <div class="content">
+        <div class="content{{ with.Params.contentClass }} {{ . }}{{ end }}">
