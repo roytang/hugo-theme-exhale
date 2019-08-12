@@ -293,3 +293,20 @@ table.grid_archive a {
     height: 6rem;
     padding: 1rem;
 }
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.navigation a {
+    display: block;
+}
+
+.navigation .prev {
+    text-align: left;
+}
+
+.navigation .next {
+    text-align: right;
+}
