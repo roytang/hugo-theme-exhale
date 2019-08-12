@@ -115,7 +115,7 @@ blockquote {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
     margin-left: 1rem;
-    padding-left: 0.2rem;
+    padding-left: 1rem;
     border-left: 3px {{ .Site.Params.mainColor | default "orange" }} solid;
 } 
 
