@@ -2,7 +2,7 @@
     {{ with .Site.Params.footline }}
         <p>{{ . | markdownify }}</p>
     {{ end }}
-    (c) 2002-{{ now.Format "2006" }} {{ .Site.Author.name }}
+    (c) 2002-{{ now.Format "2006" }} {{ .Site.Author.name }} unless otherwise indicated.
     {{ if .Site.Params.license }}
     {{ .Site.Params.license | markdownify }}
     {{ else }}
