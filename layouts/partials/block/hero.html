@@ -20,6 +20,16 @@
           <span class="fab fa-twitter-square"></span>&nbsp;@{{ . }}</a>
         {{ end }}
     
+        {{ with .Site.Params.mastodon_url }}
+        <a id="contact-link-mastodon" rel="me" class="contact_link" href="{{ . }}">
+        {{ end }}
+        {{ with .Site.Params.mastodon }}
+        <span class="fab fa-mastodon"></span>&nbsp;@{{ . }}</a>
+        {{ end }}
+        {{ with .Site.Params.mastodon_url }}
+        </a>
+        {{ end }}
+    
         {{ with .Site.Params.linkedin }}
         <a id="contact-link-linkedin" rel="me" class="contact_link" href="https://www.linkedin.com/in/{{ . }}">
           <span class="fab fa-linkedin"></span>&nbsp;{{ . }}</a>
