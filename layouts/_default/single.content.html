@@ -1,7 +1,7 @@
 <div class="content e-content">
 {{ .Content }}
 <hr>
-{{ if .IsPage }}
+{{ if and (.IsPage) (not (eq .Type "page")) }}
 <div class="navigation">
   {{ if or ( .NextInSection ) ( .PrevInSection ) }}
 
