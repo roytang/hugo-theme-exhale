@@ -6,7 +6,7 @@
     {{ if .Params.author.url }}
         <a href="{{ .Params.author.url }}">{{ .Params.author.name }}</a>
     {{ else }}
-        {{ .Params.author.name }} 
+        <span class='linkless-commenter'>{{ .Params.author.name }} </span>
     {{ end }}
     on <a href="{{ .Params.parent_page.urlpath | absURL  }}">{{ .Params.parent_page.Title }}</a></h3>
 </div>

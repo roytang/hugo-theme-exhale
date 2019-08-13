@@ -1,5 +1,5 @@
 {{ partial "head" . }}
-<article id="main-content" class="container main_content list">
+<div id="main-content" class="container main_content list">
   <header class="container">
   </header>
   <div class="container content">
@@ -8,5 +8,6 @@
     {{ end }}
   </div>
   {{ partial "pagination" . }}
-</article>
+</div>
+{{ partial "block/hero" . }}
 {{ partial "foot" . }}

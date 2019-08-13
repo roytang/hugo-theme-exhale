@@ -5,14 +5,13 @@
             {{ .Site.Author.name }}
         </a>
         <p class="u-email" style="display:none">{{ .Site.Author.email }}</p>
-        <p><a class="baselink" href="{{ .Site.BaseURL }}">
+        <h1><a class="baselink" href="{{ .Site.BaseURL }}">
         {{ .Site.Title }}
-        </a></p>
+        </a></h1>
         <p class="p-note">{{ .Site.Params.topline | markdownify }}</p>
     </div>
 </header>
 <div class="secondheader">
     {{ partial "header/search" . }}
-    {{ partial "header/header_icons" . }}
 </div>
 

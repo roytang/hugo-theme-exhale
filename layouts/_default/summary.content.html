@@ -3,5 +3,7 @@
     <img class="summary-image-preview" src="{{ . }}" />
 {{ end }}
 {{ .Summary }}
-<p><a href="{{ .Permalink }}">READ MORE</a></p>
+{{ if .Truncated }}
+<p><a href="{{ .Permalink }}">read more</a></p>
+{{ end }}
 </div>

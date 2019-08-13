@@ -1,5 +1,8 @@
 {{ partial "head" . }}
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+
+{{ partial "block/hero" . }}
+
+{{ $paginator := .Paginate .Pages }}
 {{ range $paginator.Pages }}
     {{ .Render "list_item" }}
 {{ end }}

@@ -51,7 +51,7 @@
 <meta name="twitter:url" content="{{ .Permalink }}" />
 <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
 {{ if .Params.featuredImage }}
-<meta name="twitter:image" content="{{ .Params.featuredImage }}">
+<meta name="twitter:image" content="{{ .Params.featuredImage | absURL }}">
 {{ else if .Site.Params.featuredImage }}
 <meta name="twitter:image" content="{{ .Site.Params.featuredImage }}">
 {{ end }}
