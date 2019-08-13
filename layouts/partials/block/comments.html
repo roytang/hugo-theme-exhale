@@ -2,11 +2,8 @@
 <div class="comments">
 <h3>Comments</h3>
 
-{{ $v1 := where .Site.Pages "Section" "comment" }}
 {{ $url := urls.Parse .Permalink }}		
-{{ $v2 := where .Site.Pages "Params.parent_page.urlpath" $url.Path }}
-
-{{ $filtered := $v1 | intersect $v2 }}
+{{ $filtered := where .Site.Pages "Params.parent_page.urlpath" $url.Path }}
 {{ range sort $filtered "Params.date" }}
 <div class="comment">
     <h4 class="p-name">Comment by 
@@ -16,7 +13,6 @@
                 {{ .Params.author.name }} 
             {{ end }}
             on <a href="{{ .Permalink  }}">{{.Date.Format "2006-01-02"}}</a></h4>
-        
     {{.Content}}
 </div>
 {{ end }}
