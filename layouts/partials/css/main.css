@@ -184,6 +184,7 @@ table.grid_archive td, table.grid_archive th {
 
 table.grid_archive td.arc {
     text-align: center;
+    border: 1px solid var(--second-color);
 }
 table.grid_archive a {
     text-decoration: none;
