@@ -409,3 +409,13 @@ code {
 hr {
     border-color: var(--second-color);
 }
+
+#comments-form {
+    width: 100%;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+#comments-form input, #comments-form textarea {
+    width: 80%;
+}
