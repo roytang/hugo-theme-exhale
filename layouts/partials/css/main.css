@@ -127,6 +127,8 @@ article img {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+    box-shadow: 1px 1px 0 0 var(--second-color);    
+    margin-bottom: 0.5rem;
 }
 
 .twitter-tweet {
@@ -201,6 +203,10 @@ table.grid_archive a {
 .pagination a {
     text-decoration: none;
     padding: 0.3rem;
+}
+
+.pagination .active {
+    color: var(--second-color);
 }
 
 /* MTG Decklist */
@@ -419,4 +425,39 @@ hr {
 
 #comments-form input, #comments-form textarea {
     width: 80%;
+}
+
+div.image-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.image-list a {
+    font-size: 16px; 
+    display: inline-block;
+    margin-bottom: 8px;
+    width: calc(50% - 4px);
+    margin-right: 8px;
+}
+
+div.image-list img {
+    box-shadow: 1px 1px 0 0 var(--second-color);    
+}
+  
+div.image-list a:nth-of-type(2n) {
+    margin-right: 0;
+}
+  
+@media screen and (min-width: 50em) {
+    div.image-list a {
+        width: calc(25% - 6px);
+    }
+
+    div.image-list a:nth-of-type(2n) {
+        margin-right: 8px;
+    }
+
+    div.image-list a:nth-of-type(4n) {
+        margin-right: 0;
+    }
 }

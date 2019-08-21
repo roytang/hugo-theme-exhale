@@ -15,4 +15,10 @@
         {{ end }}
         </p>
 
+        <p>
+        {{ range .Params.syndicated }}
+        <a rel="syndication" class="u-syndication" href="{{ .url }}">View on {{ .type }}</a>
+        {{ end }}
+        </p>
+
     </div>
