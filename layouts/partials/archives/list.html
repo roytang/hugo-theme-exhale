@@ -1,6 +1,6 @@
 <div class="list_archive">
     <ul>
-    {{ range (where .Site.Pages "Section" "post").GroupByDate "2006 January" }}
+    {{ range (where .Site.RegularPages "Section" "post").GroupByDate "2006 January" }}
         {{ $count := len (.Pages) }}
         {{ $key := .Key }}
         {{ range first 1 .Pages }}
