@@ -435,9 +435,9 @@ div.image-list {
 div.image-list a {
     font-size: 16px; 
     display: inline-block;
-    margin-bottom: 8px;
-    width: calc(50% - 4px);
-    margin-right: 8px;
+    margin-bottom: 4px;
+    width: calc(100% - 2px);
+    margin-right: 4px;
 }
 
 div.image-list img {
@@ -450,11 +450,11 @@ div.image-list a:nth-of-type(2n) {
   
 @media screen and (min-width: 50em) {
     div.image-list a {
-        width: calc(25% - 6px);
+        width: calc(25% - 3px);
     }
 
     div.image-list a:nth-of-type(2n) {
-        margin-right: 8px;
+        margin-right: 4px;
     }
 
     div.image-list a:nth-of-type(4n) {
