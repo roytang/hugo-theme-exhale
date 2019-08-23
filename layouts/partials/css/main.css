@@ -1,6 +1,9 @@
 :root {
     --main-color: {{ .Site.Params.mainColor | default "orange" }};
     --second-color: coral;
+    --third-color: teal;
+    --container-color: #353b43;
+    --second-container-color: #353f43;
 }
 
 body {
@@ -235,7 +238,7 @@ table.grid_archive a {
 
 article {
     display: block;
-    background-color: #353b43;
+    background-color: var(--container-color);
     border-radius: 2px;
     margin: 0.5rem;
     margin-bottom: 1rem;
@@ -243,13 +246,14 @@ article {
     box-shadow: 4px 4px 0 0 var(--second-color);
 }
 
-article .e-content {
+article .e-content, article .comments {
     padding: 1rem;
 }
 
 .list_item .meta {
     font-size: 0.7rem;
-    color: gray;
+    color: var(--third-color);
+    background-color: var(--second-container-color);
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
@@ -261,7 +265,7 @@ article .e-content {
 
 .comments-title {
     font-size: 0.7rem;
-    color: gray;
+    color: var(--third-color);
 }
 
 .list_item .meta p {
@@ -285,7 +289,7 @@ code {
     .list_item {
         display: grid;
         grid-template-columns: [c-left-start] 1fr [c-main-start] 3.5fr [c-main-end];
-        grid-template-rows: [r-title-start] auto [r-main-start] auto [r-main-end];
+        grid-template-rows: [r-title-start] auto [r-main-start] auto [r-comments-start] auto [r-main-end];
         border-bottom: 1px var(--main-color) dotted;
         width: 100%;
     }
@@ -293,18 +297,19 @@ code {
     .list_item .title {
         grid-column: c-main-start / c-main-end;
         grid-row: r-title-start / r-main-start;
+        padding-left: 0.5rem;
     }
 
     .list_item .content {
         grid-column: c-main-start / c-main-end;
-        grid-row: r-main-start / r-main-end;
+        grid-row: r-main-start / r-comments-start;
     }
 
     .list_item .meta {
         grid-column: c-left-start / c-main-start;
         grid-row: r-title-start / r-main-end;
         font-size: 0.7rem;
-        color: gray;
+        color: var(--third-color);
         text-align: right;
         padding-top: 1rem;
         padding-right: 1rem;
@@ -317,7 +322,10 @@ code {
         color: gray;
         text-align: right;
     }
-    
+
+    .list_item .comments {
+        grid-column: c-main-start / c-main-end;
+    }
     
     .list_item .meta time {
         font-size: 0.9rem;
@@ -362,6 +370,8 @@ code {
 .navigation {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .navigation a {
@@ -460,4 +470,13 @@ div.image-list a:nth-of-type(2n) {
     div.image-list a:nth-of-type(4n) {
         margin-right: 0;
     }
+}
+
+div.comment {
+    border: 1px var(--third-color) dotted;
+    background-color: var(--second-container-color);
+    box-shadow: 1px 1px 0 0 var(--third-color);    
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0.5rem;
 }
