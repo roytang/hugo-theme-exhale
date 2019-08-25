@@ -2,6 +2,7 @@
     {{ range .Site.RegularPages }}
     "{{ .RelPermalink }}": {
         "full_url": "{{ .Permalink }}",
+        "kind": "{{ .Kind }}",
         "source_path": {{ .File.Path |jsonify }},
         {{ if .Params.syndicated }}
         "syndicated": [
