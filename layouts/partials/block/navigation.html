@@ -9,7 +9,7 @@
     {{end}}
     {{ if .NextInSection }}
     <a class="next" href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}">
-            {{ with .Next.Title }}{{ . }}{{ else }} Next {{ end }} <i class="fas fa-arrow-right"></i>
+            {{ with .NextInSection.Title }}{{ . }}{{ else }} Next {{ end }} <i class="fas fa-arrow-right"></i>
     </a>
     {{end}}
   {{ end }}
