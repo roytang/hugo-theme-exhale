@@ -463,6 +463,7 @@ div.image-list a {
 
 div.image-list img {
     box-shadow: 1px 1px 0 0 var(--second-color);    
+    max-width: none;
 }
   
 div.image-list a:nth-of-type(2n) {
